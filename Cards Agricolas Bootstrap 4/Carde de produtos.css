@@ -1,54 +1,406 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-body{
-	background: #F5F1EE;
-	font-family: 'Roboto', sans-serif;
-}
-.card{
-	width: 250px;
-	border-radius: 10px;
+body { font-family: sans-serif; }
+
+.scene {
+  display: inline-block;
+  width: 200px;
+  height: 260px;
+/*   border: 1px solid #CCC; */
+  margin: 40px 0;
+  perspective: 600px;
 }
 
-.card-img-top{
-	border-top-right-radius: 10px;
-	border-top-left-radius: 10px;
-}
-span.text-muted{
-	font-size: 12px;
-}
-small.text-muted{
-	font-size: 8px;
-}
-h5.mb-0{
-	font-size: 1rem;
-}
-small.ghj{
-	font-size: 9px;
-}
-.mid{
-	background: #ECEDF1;
-}
-h6.ml-1{
-	font-size: 13px;
-}
-small.key{
-	text-decoration: underline;
-	font-size: 9px;
-	cursor: pointer;
-}
-.btn-danger{
-	color: #FFCBD2;
-}
-.btn-danger:focus{
-	box-shadow: none;
-}
-small.justify-content-center{
-	font-size: 9px;
-	cursor: pointer;
-	text-decoration: underline;
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
 }
 
-@media screen and (max-width:600px){
-    .col-sm-4{
-        margin-bottom: 50px;
-    }
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
 }
+
+.card2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card2.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card3.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card4 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card4.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card5 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card5.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card6 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card6.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /*line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;*/
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  /*background: crimson;*/
+}
+
+.card__face--back {
+  /*background: slateblue;*/
+  transform: rotateY(180deg);
+}
+
+
+/********* CSS DO CARD INTERNO ************/
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #353535;
+}
+
+.container-master {
+    width: 100vw;
+	height: 80vh;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;   
+}
+
+.container-card {
+  width: 280px;
+  height: 500px;
+  /*margin: 10px auto;*/
+  margin-left: 20px;
+  float:left;
+}
+
+.container {
+  width: 280px;
+  height: 500px;
+  margin: 0px auto;
+}
+
+.card-interno {
+  border-radius: 25px;
+  box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card-head {
+  position: relative;
+  height: 252px;
+  background: #fa782e;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #fa782e 8%, #c82930 83%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #fa782e 8%, #c82930 83%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #fa782e 8%, #c82930 83%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fa782e', endColorstr='#c82930', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  border-radius: 25px 25px 0 0;
+}
+
+.card-logo {
+  width: 30px;
+  margin: 20px;
+}
+
+.product-img {
+  position: absolute;
+  left: 0;
+  margin-top: -16px;
+  margin-left: 50px;
+}
+
+.back-text {
+  display: inline-block;
+  font-size: 70px;
+  font-weight: 900;
+  margin-left: 14px;
+  margin-top: 40px;
+  opacity: 0.1;
+}
+
+.card-body {
+  height: 255px;
+  background: #fff;
+  border-radius: 0 0 25px 25px;
+}
+
+.product-title {
+  padding: 20px 20px 5px 20px;
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  /*text-transform: uppercase;*/
+}
+
+.product-title b {
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.badge {
+  position: relative;
+  font-size: 13px;
+  font-weight: 90;
+  color: #fff;
+  background: #11e95b;
+  padding: 4px 4px;
+  border-radius: 10px;
+  top: -2px;
+  margin-left: 5px;
+}
+
+.info {
+  position: relative;  
+  padding: 3px 3px;  
+  top: 5px;
+  margin-left: 5px;
+}
+
+.expandir {
+	position: relative;
+  padding: 3px 3px;
+  top: -35px;
+  margin-left: 200px;
+}
+
+.qrcode-style{
+	position: relative;
+  width: 70%;
+  height: auto;
+  margin-left: 10%;
+  top: -50px;
+  padding: 5%;
+}
+
+.product-caption {
+  display: block;
+  padding: 0 20px;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.product-rating {
+  padding: 0 20px;
+  font-size: 11px;
+}
+
+.product-rating i.grey {
+  color: #acacab;
+}
+
+.product-size h4 {
+  font-size: 15px;
+  padding: 0 21px;
+  margin-top: 80px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.ul-size {
+  margin-left: 15px;
+}
+
+.ul-size li {
+  list-style: none;
+  float: left;
+  margin-right: 20px;
+}
+
+.ul-size li a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 23px;
+  color: #000;
+}
+
+.ul-size li a.active {
+  background: #f35e3d;
+  color: #fff;
+}
+
+.product-size:before,
+.product-size:after {
+  content: '';
+  display: block;
+  clear: both;
+} 
+
+.product-price {
+  position: absolute;
+  background: #11e95b;
+  padding: 2px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 120;
+  color: #fff;
+  border-radius: 6px;
+  margin-top: 30px;
+  margin-left: 60px;
+  box-shadow: -10px 20px 15px -10px rgba(17, 233, 91, 0.3);
+}
+
+.product-price b {
+  margin-left: 5px;
+}
+
+.custom-btn {
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+/* 12 */
+.btn-12{
+  position: relative;
+  top: -5px;
+  right: 0px;
+  bottom: 0px;
+  border:none;
+  width: 40px;
+  height: 20px;
+  line-height: 32px;
+  /*-webkit-perspective: 230px;
+  perspective: 230px;*/
+  font-size:14px;
+}
+.btn-12 span {
+  display: block;
+  position: absolute;
+  width: 40px;  
+  height: 35px;
+  border: none;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-12 span:nth-child(1) {
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12:hover span:nth-child(1) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  background: #f35e3d;
+  color:#fff;
+  border-radius: 100%;
+}
+.btn-12:hover span:nth-child(2) {
+  /*background: #f35e3d;
+  color: #f35e3d;*/
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  
+}
+
