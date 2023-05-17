@@ -93,6 +93,50 @@ body { font-family: sans-serif; }
   transform: translateX(-100%) rotateY(-180deg);
 }
 
+.card7 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  /*transform-origin: center right;*/
+  transition: transform 0.8s;
+}
+
+.card7.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card8 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  /*transform-origin: center right;*/
+  transition: transform 0.8s;
+}
+
+.card8.is-flipped {
+  transform: rotateY(180deg);
+}
+
+
+.card9 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  /*transform-origin: center right;*/
+  transition: transform 0.8s;
+}
+
+.card9.is-flipped {
+  transform: rotateY(180deg);
+}
+
+
 .card__face {
   position: absolute;
   width: 100%;
@@ -227,10 +271,31 @@ body {
 }
 
 .info {
-  position: relative;  
-  padding: 3px 3px;  
+  position: relative;
+  float: right
+  /*padding: 3px 3px;  
   top: 5px;
-  margin-left: 5px;
+  margin-left: 55px;*/
+}
+
+/****** CSS IFRAME **************/
+
+.container-iframe {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 64.25%; /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .expandir {
@@ -403,4 +468,3 @@ body {
   transform: rotateX(-90deg);
   
 }
-
